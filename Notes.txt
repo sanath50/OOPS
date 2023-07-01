@@ -2,8 +2,9 @@ class is a template definition of the methods and variables in a particular kind
 
 The functions defined in a class are called methods and outside they are called functions
 
-The self is used in method functions as python sends the object itself as the first argument hence self is used to avoid any
-confusion, Instance name this is Item is passed as first argument mapping to the self keyword
+The self is used in method functions as python sends the 'object' itself as the first argument hence self is used to avoid any
+confusion, Instance name this is Item is passed as first argument mapping to the self keyword, here object as the first argument
+means the reference address of the object is sent as self, python is pass by reference.
 
 The instance created is called an object/instance, when an instance is created it gains access to the methods defined in the class
 
@@ -31,5 +32,28 @@ class attribute
 
 Use __repr__ method to output instances in the console as however you want
 
-The code and the data should not be in the same place so create a new file, and to import the file values in use a class method
+Class Method : initialised using @classmethod. and the first argument sent is the class itself as cls that is the class reference
+address as the first parameter
+The code and the data should not be in the same place so create a new file, and to import the file values in use a 'class method'
+Class method are methods which are used to import instances, since an instance cannot import another intsance, class method is used
+as it has higher access
 
+Static method : Initialised using @static method, here we are not sending the instance as a first argument unlike previous cases.
+only regular parameters are sent, hence we should relate to the static method like the isolated function we see regularly
+
+NEVER CALL A CLASS OR STATIC METHOD FROM AN INSTANCE, ALWAYS CALL IT FROM A CLASS
+
+The difference between static and Class method:
+
+1.Static method should be used when we want to do something that is not unique with an instance but should still have a relationship
+to the class, because if there is no relationship with the class then it might as well be an isolated function, like in our example
+it has nothing to do with any instance, but it still has a relation with the class as it takes the price value to check if integer.
+
+2. Class method : It is for instantiating instances meaning only if you are creating instances from data in an external location
+then it is best to use class method like in our project, these are used to manipulate different structures of data.
+
+The main difference, static methods are not passing the object reference as the first argument in the background, but in class method
+the first argument received is a mandatory parameter so the class reference is passed in the background to cls.
+
+INHERITANCE: When we need to work on a small subset of parent class, we can inherit all methods,attributes of parent class to a
+child class and have some methods of its own
