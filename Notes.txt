@@ -1,0 +1,29 @@
+class is a template definition of the methods and variables in a particular kind of object.
+
+The functions defined in a class are called methods and outside they are called functions
+
+The self is used in method functions as python sends the object itself as the first argument hence self is used to avoid any
+confusion, Instance name this is Item is passed as first argument mapping to the self keyword
+
+The instance created is called an object/instance, when an instance is created it gains access to the methods defined in the class
+
+For any instance you can define attributes like name, quantity etc.
+
+Whenever an instance is called, to avoid having to define attributes every time we use a constructor to pass the attributed in the
+class dynamically by using a __init__ method
+
+When we create an instance say item = Item(), the code first runs a __init__ method also called as constructor, by using this method
+in class, one can define all necessary attributes for an instance dynamically, to minimize the repeatatiive declaration of attributes
+in instances
+def __init__(self(Instance name), name, price,quantity):
+    self.name(Variable)= name(Argument)
+    self.price = price
+    self.quantity = quantity
+In the above code self will substitute to the instance/object name
+You can also declare attributes to both methods and instances
+
+When you are declaring other methods in the class, you need not declare parameters as you have already declared in the constructor
+function
+
+
+
