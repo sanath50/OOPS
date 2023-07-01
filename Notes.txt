@@ -25,5 +25,11 @@ You can also declare attributes to both methods and instances
 When you are declaring other methods in the class, you need not declare parameters as you have already declared in the constructor
 function
 
+There are attributes called class attributes, which are defined outside all instances and they can
+be accessed in class and instance level only not in method  level of class, you can overwrite a
+class attribute
 
+Use __repr__ method to output instances in the console as however you want
+
+The code and the data should not be in the same place so create a new file, and to import the file values in use a class method
 
