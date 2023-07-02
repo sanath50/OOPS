@@ -39,26 +39,4 @@ class Item:
         else:
             return False
     def __repr__(self):
-        return f"Item('{self.name}',{self.price},{self.quantity})"
-
-#Item.instantiate_from_csv()
-
-#print(Item.all)
-
-# print(Item.is_integer(7.0))
-
-class Phone(Item):
-    all = []
-    def __init__(self, name : str, price : float, quantity=0, broken_phone=0):
-        #Call super function to inherit all attributes/methods
-        super().__init__(
-            name,price,quantity
-        )
-        #To avoid some unnecessary cases we use assert
-        assert broken_phone>=0, f"Quantity = {broken_phone}, is not greater than zero!"
-
-        self.broken_phone = broken_phone
-        Phone.all.append(self)
-
-phone1 = Phone('HTC',1231,12,1)
-print(phone1.calculate_total_price())
+        return f"{self.__class__.__name__}('{self.name}',{self.price},{self.quantity})"

@@ -57,3 +57,9 @@ the first argument received is a mandatory parameter so the class reference is p
 
 INHERITANCE: When we need to work on a small subset of parent class, we can inherit all methods,attributes of parent class to a
 child class and have some methods of its own
+1. We need to add same constructor from parent class along with additional variables
+2. Use a super function to access all attributes/methods
+3. Add only extra stuff and run
+
+For large amounts of instances it is better to use multiple files
+1. main = Dedicated for only creating instances
