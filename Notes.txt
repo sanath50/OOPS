@@ -63,3 +63,40 @@ child class and have some methods of its own
 
 For large amounts of instances it is better to use multiple files
 1. main = Dedicated for only creating instances
+2. One contains the Parent class definitions
+3. One more file with child class definitions
+
+Getters and Setter: Encapsulation, i.e. restricting access to some operations like overwrite a name for an attribute in an instance
+Getter are properties which use decorators to get the file name with only read access, here the attribute can't be overwritten
+for the attribute you want to make it into read access you just create a function inside the decorator with the attribute name,
+and you introduce __name in place of 'name', so that it will become a 'PRIVATE ATTRIBUTE' and will not be called from instance level
+so when Item.name is called, name will be the name of the function which return the attribute name on read only permission
+Using a decorator u can make an attribute read only and similarly another function with the same name inside a setter property
+will overwrite read only permissions.
+_name can be used to make it work, but _name is accessible through instance level
+__name will turn the attribute private
+If you want to make an attribute a private or any other kind of attribute the pass the attribute as function inside properties
+in this way you can convert then to private attributes.
+
+OOPS has 4 key principles :
+
+1. Encapsulation :A mechanism of restricting direct write access to some of our attributes in a program,it dont allow access directly
+to the attribute but you can manipulate the attribute value with function like applying discount, for example the price attribute
+Attribute security : Instance should not be able to access write for an attribute
+
+2. Abstraction : The principle which says to hide unnecessary info to the user, say for example we need to send an email to someone
+there are multiple methods involved in the class, an instance will have access to those intermediate methods too, that is not good
+so we need to make those intermediate functions private by adding __, only the final functions should be acccessible to the instance
+in between methods should be accessible only inside the class and not at the instance level, so make those methods private
+Method security : Instance should not have access to intermediate methods
+
+3. Inheritance : A mechanism that allows us to reuse the code across different classes
+
+4. Polymorphism : It referes to use of a single entity in different scenarios, for example len() function in python works for all
+kinds of data list, string etc, similarly when we inherit parent class to child class and then use parent class methods in child
+class, that is polymorphism, also we can use the parent class attributes with a different value in each child class and when they are
+called from the instance the parent class attribute value will be overridden by child class attribute value, so polymorphism means
+to use a single entity multiple times wherever we want with different properties and values, you can use same parent class methods
+with different logic and that will be considered while running instead of parent class method
+
+The parts of the process are classes and actions performed are the methods
